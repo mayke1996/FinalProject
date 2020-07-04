@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'carga-edit',
     loadChildren: () => import('./carga-edit/carga-edit.module').then( m => m.CargaEditPageModule)
   },
+  {
+    path: 'carga-update',
+    loadChildren: () => import('./carga-update/carga-update.module').then( m => m.CargaUpdatePageModule)
+  },
 ];
 
 @NgModule({

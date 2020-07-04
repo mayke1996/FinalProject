@@ -12,7 +12,6 @@ export class CargaService {
 
   constructor(private db: AngularFireDatabase) { }
 
-  // Create
   createCarga(carga: Carga) {
     return this.cargaListRef.push({
       nome: carga.nome,
@@ -21,19 +20,15 @@ export class CargaService {
     })
   }
 
-  // Get Single
   getCarga(id: string) {
     this.cargaRef = this.db.object('/carga/' + id);
     return this.cargaRef;
   }
 
-  // Get List
   getCargaList() {
     this.cargaListRef = this.db.list('/carga');
     return this.cargaListRef;
   }
-
-  // Update
   updateCarga(id, carga: Carga) {
     return this.cargaRef.update({
       name: carga.nome,
@@ -42,7 +37,6 @@ export class CargaService {
     })
   }
 
-  // Delete
   deleteCarga(id: string) {
     this.cargaRef = this.db.object('/carga/' + id);
     this.cargaRef.remove();

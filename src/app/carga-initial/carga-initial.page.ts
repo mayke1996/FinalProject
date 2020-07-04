@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Carga } from '../shared/Carga';
 import { CargaService } from './../shared/carga.service';
 
@@ -12,7 +13,8 @@ export class CargaInitialPage implements OnInit {
   Cargas = [];
 
   constructor(
-    private cargaService: CargaService
+    private cargaService: CargaService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -34,11 +36,15 @@ export class CargaInitialPage implements OnInit {
     })
   }
 
-  deleteBooking(id) {
+  deleteCarga(id) {
     console.log(id)
     if (window.confirm('Tem certeza que deseja deletar?')) {
       this.cargaService.deleteCarga(id)
     }
+  }
+
+  showPageUpdate(){
+    this.router.navigate(['/carga-initial']);
   }
 
 }
