@@ -8,8 +8,16 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'carga-initial',
     pathMatch: 'full'
+  },
+  {
+    path: 'carga-initial',
+    loadChildren: () => import('./carga-initial/carga-initial.module').then( m => m.CargaInitialPageModule)
+  },
+  {
+    path: 'carga-edit',
+    loadChildren: () => import('./carga-edit/carga-edit.module').then( m => m.CargaEditPageModule)
   },
 ];
 

@@ -1,3 +1,17 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button routerLinkActive="tab-selected" routerLink="/carga-initial" class="ios" tab="carga-initial">
+      <ion-icon name="list"></ion-icon>
+      <ion-label>Cargas</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button routerLinkActive="tab-selected" routerLink="/carga-edit" class="ios" tab="carga-edit">
+      <ion-icon name="add-circle"></ion-icon>
+      <ion-label>Adicionar Carga</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
