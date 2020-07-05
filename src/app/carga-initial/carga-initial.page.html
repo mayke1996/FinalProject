@@ -11,10 +11,13 @@
     <ion-item *ngFor="let carga of Cargas" class="user-list">
       <ion-label>
         <h5>
-          <ion-icon name="logo-dropbox"></ion-icon> {{carga.nome}}
+          <ion-icon name="cube-outline"></ion-icon> {{ carga.nome }}
         </h5>
         <p>
-          <ion-icon name="call"></ion-icon> {{carga.peso}}
+          <ion-icon name="barbell-outline"></ion-icon> {{ carga.peso }}
+        </p>
+        <p>
+          <ion-icon name="expand-outline"></ion-icon> {{ carga.tamanho }}
         </p>
       </ion-label>
 
@@ -28,5 +31,7 @@
       </div>
     </ion-item>
   </ion-list>
+
+  
 
 </ion-content>
