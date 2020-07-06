@@ -31,9 +31,9 @@ export class CargaService {
   }
   updateCarga(id, carga: Carga) {
     return this.cargaRef.update({
-      name: carga.nome,
-      email: carga.peso,
-      mobile: carga.tamanho
+      nome: carga.nome,
+      peso: carga.peso,
+      tamanho: carga.tamanho
     })
   }
 

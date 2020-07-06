@@ -20,7 +20,7 @@ const routes: Routes = [
     loadChildren: () => import('./carga-edit/carga-edit.module').then( m => m.CargaEditPageModule)
   },
   {
-    path: 'carga-update',
+    path: 'carga-update/:id',
     loadChildren: () => import('./carga-update/carga-update.module').then( m => m.CargaUpdatePageModule)
   },
   {
@@ -28,7 +28,7 @@ const routes: Routes = [
     loadChildren: () => import('./movie/movie.module').then( m => m.MoviePageModule)
   },
   {
-    path: 'movie-details',
+    path: 'movie-details/:id',
     loadChildren: () => import('./movie-details/movie-details.module').then( m => m.MovieDetailsPageModule)
   },
 ];

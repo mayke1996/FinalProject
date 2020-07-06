@@ -22,7 +22,7 @@
       </ion-label>
 
       <div class="item-note" item-end>
-        <button ion-button clear [routerLink]="['/carga-edit/']">
+        <button ion-button clear [routerLink]="['/carga-update/', carga.$key]">
           <ion-icon name="create" style="zoom:2.0"></ion-icon>
         </button>
         <button ion-button clear (click)="deleteCarga(carga.$key)">

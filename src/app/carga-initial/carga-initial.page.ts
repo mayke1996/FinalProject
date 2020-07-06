@@ -43,8 +43,8 @@ export class CargaInitialPage implements OnInit {
     }
   }
 
-  showPageUpdate(){
-    this.router.navigate(['/carga-initial']);
+  toPageUpdateCarga(idCarga){
+    this.router.navigateByUrl('/carga-update/' + idCarga);
   }
 
 }
