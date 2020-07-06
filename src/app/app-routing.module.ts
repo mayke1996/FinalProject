@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'carga-update',
     loadChildren: () => import('./carga-update/carga-update.module').then( m => m.CargaUpdatePageModule)
   },
+  {
+    path: 'movie',
+    loadChildren: () => import('./movie/movie.module').then( m => m.MoviePageModule)
+  },
 ];
 
 @NgModule({
