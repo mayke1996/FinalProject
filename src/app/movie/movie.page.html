@@ -8,19 +8,9 @@
 
   <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)"></ion-searchbar>
  
-  <ion-item>
-    <ion-label>Select Searchtype</ion-label>
-    <ion-select [(ngModel)]="type" (ionChange)="searchChanged($event)">
-      <ion-select-option value="">All</ion-select-option>
-      <ion-select-option value="movie">Movie</ion-select-option>
-      <ion-select-option value="series">Series</ion-select-option>
-      <ion-select-option value="episode">Episode</ion-select-option>
-    </ion-select>
-  </ion-item>
- 
   <ion-list>
  
-    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'movies', item.imdbID]">
+    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/movie-details', item.imdbID]">
       <ion-avatar slot="start">
         <img [src]="item.Poster" *ngIf="item.Poster != 'N/A'">
       </ion-avatar>
