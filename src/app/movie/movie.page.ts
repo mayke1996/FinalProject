@@ -9,9 +9,17 @@ import { Observable } from 'rxjs';
 })
 export class MoviePage implements OnInit {
 
-  constructor() { }
+  results: Observable<any>;
+  searchTerm: string = '';
+  type: SearchType = SearchType.all;
+
+  constructor(private movieService: MovieService) { }
 
   ngOnInit() {
+  }
+
+  searchChanged() {
+    this.results = this.movieService.searchData(this.searchTerm, this.type);
   }
 
 }
